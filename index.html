@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        @font-face {
+            font-family: 'xkcd-script';
+            src: url('xkcd-script.ttf') format('truetype');
+        }
+
+        body {
+            background-color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: 'xkcd-script', sans-serif;
+        }
+
+        #comic-container {
+            position: relative;
+            display: inline-block;
+        }
+
+        img {
+            display: block;
+            max-width: 100%;
+        }
+
+        .text {
+            position: absolute;
+            /* Adjust these values to position the text over the image */
+            white-space: normal; /* This allows the text to break onto the next line */
+            word-wrap: break-word; /* This breaks the word at the end of the line if it's too long */
+        }
+
+        #text1 {
+            top: 5%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        #text2 {
+            top: 15%;
+            left: 4%;
+            width: 80px; /* Adjust this value to change the wrapping length */
+        }
+
+        #text3 {
+            top: 15%;
+            left: 19%;
+            width: 80px; /* Adjust this value to change the wrapping length */
+        }
+
+        #text4 {
+            top: 15%;
+            left: 35%;
+            width: 100px; /* Adjust this value to change the wrapping length */
+        }
+
+        #text5 {
+            top: 15%;
+            left: 53%;
+            width: 80px; /* Adjust this value to change the wrapping length */
+        }
+
+        #text6 {
+            top: 15%;
+            left: 68%;
+            width: 100px; /* Adjust this value to change the wrapping length */
+        }
+
+        #text7 {
+            top: 15%;
+            left: 83%;
+            width: 100px; /* Adjust this value to change the wrapping length */
+        }
+
+        form#inputs {
+            display: flex;
+            flex-direction: column;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+<div id="comic-container">
+    <img id="comic" src="xkcd-blank.png" alt="xkcd comic">
+    <div id="text1" class="text"></div>
+    <div id="text2" class="text"></div>
+    <div id="text3" class="text"></div>
+    <div id="text4" class="text"></div>
+    <div id="text5" class="text"></div>
+    <div id="text6" class="text"></div>
+    <div id="text7" class="text"></div>
+</div>
+<form id="inputs">
+    <label for="title"></label><input type="text" id="title" placeholder="Title" value="Where does data come from?">
+    <label for="panel1-person1"></label><input type="text" id="panel1-person1" placeholder="Panel 1, Person 1"
+                                               value="I need this data to look like this by the 14th.">
+    <label for="panel1-person2"></label><input type="text" id="panel1-person2" placeholder="Panel 1, Person 2"
+                                               value="Well I guess I could just mock it on the front end.">
+    <label for="panel2-person1"></label><input type="text" id="panel2-person1" placeholder="Panel 2, Person 1"
+                                               value="I've been using fake data for weeks. When will the backend be done?">
+    <label for="panel2-person2"></label><input type="text" id="panel2-person2" placeholder="Panel 2, Person 2"
+                                                  value="Well, I guess I'll just mock it on the back end.">
+    <label for="panel3-person1"></label><input type="text" id="panel3-person1" placeholder="Panel 3, Person 1"
+                                                  value="I hard coded these values. When are we getting real data?">
+    <label for="panel3-person2"></label><input type="text" id="panel3-person2" placeholder="Panel 3, Person 2"
+                                                    value="I've got a cron job to pipe /dev/random to a curl for you, anytime.">
+
+</form>
+<script src="script.js"></script>
+</body>
+</html>
