@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <title>Your Website Title</title>
+    <meta property="og:title" content="XKCD Generator">
+    <meta property="og:description" content="Create your own xkcd-esq jokes.">
+    <meta property="og:image" content="https://mattmorganpdx.github.io/xkcd-generator/xkcd-blank.png">
+    <meta property="og:url" content="https://mattmorganpdx.github.io/xkcd-generator/">
     <style>
         @font-face {
             font-family: 'xkcd-script';
@@ -78,7 +83,7 @@
         }
 
         form#inputs {
-            display: flex;
+            display: none;
             flex-direction: column;
             margin-top: 20px;
         }
@@ -95,6 +100,8 @@
     <div id="text6" class="text"></div>
     <div id="text7" class="text"></div>
 </div>
+<div><button id="show-dialog">Show Dialog Inputs</button></div>
+<div><button id="permalink">Create Permalink</button></div>
 <div>
     <form id="inputs">
         <label for="title"></label><input type="text" id="title" placeholder="Title" value="Where does data come from?">
@@ -113,7 +120,6 @@
 
     </form>
 </div>
-<div><button id="permalink">Create Permalink</button></div>
 <script src="script.js"></script>
 </body>
 </html>

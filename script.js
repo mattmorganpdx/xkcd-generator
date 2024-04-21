@@ -72,6 +72,22 @@ permalinkButton.addEventListener('click', function() {
     window.location.href = url;
 });
 
+// Get the "Show Dialog Inputs" button
+var showDialogButton = document.getElementById('show-dialog');
+
+// Add event listener to the "Show Dialog Inputs" button
+showDialogButton.addEventListener('click', function() {
+    // Get the inputs
+    var inputs = document.getElementById('inputs');
+
+    // Toggle the visibility of the inputs
+    if (inputs.style.display === 'flex') {
+        inputs.style.display = 'none';
+    } else {
+        inputs.style.display = 'flex';
+    }
+});
+
 // Trigger the 'input' event manually
 var event = new Event('input');
 form.dispatchEvent(event);
